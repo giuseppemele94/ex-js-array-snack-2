@@ -65,6 +65,7 @@ console.log("Libri disponibili :", availableBooks);
 // ciascuno con il prezzo scontato del 20% (mantieni lo stesso formato e arrotonda al centesimo)
 const discountedBooks = availableBooks.map((book) => {
     //trasformo i prezzi in numeri dato che sono stringhe 
+	//sostituisco a euro la stringa vuota cosi ho solo il numero
     const numericPrice = parseFloat(book.price.replace("€", ""));
     const discountedPrice = (numericPrice * 0.8).toFixed(2); 
 
